@@ -16,7 +16,7 @@ builder.Services.AddControllers()
     .AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 var app = builder.Build();
-
+builder.Services.AddTransient<IAuthenticationProvider, TestAuthenticationProvider>();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
