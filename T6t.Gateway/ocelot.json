@@ -1,0 +1,40 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "t6t.exemplo",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/exemplo/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 10
+      },
+      "SwaggerKey": "exemplo"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "exemplo",
+      "Config": [
+        {
+          "Name": "Exemplo API",
+          "Version": "v1",
+          "Url": "http://t6t.exemplo:80/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:58788",
+    "RequestIdKey": "OcRequestId"
+  }
+}

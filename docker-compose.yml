@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  t6t.gateway:
+    image: ${DOCKER_REGISTRY-}t6tgateway
+    build:
+      context: .
+      dockerfile: T6t.Gateway/Dockerfile
+
+  t6t.exemplo:
+    image: ${DOCKER_REGISTRY-}t6texemplo
+    build:
+      context: .
+      dockerfile: T6t.Exemplo/Dockerfile
+
