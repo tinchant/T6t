@@ -7,9 +7,9 @@ services:
       context: .
       dockerfile: T6t.Gateway/Dockerfile
 
-  t6t.exemplo:
-    image: ${DOCKER_REGISTRY-}t6texemplo
+  t6t.authorization:
+    image: ${DOCKER_REGISTRY-}t6tauthorization
     build:
       context: .
-      dockerfile: T6t.Exemplo/Dockerfile
+      dockerfile: T6t.Authorization/Dockerfile
 

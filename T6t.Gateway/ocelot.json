@@ -5,11 +5,11 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "t6t.exemplo",
+          "Host": "t6t.authorization",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/exemplo/{everything}",
+      "UpstreamPathTemplate": "/authorization/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "RateLimitOptions": {
         "ClientWhitelist": [],
@@ -18,17 +18,17 @@
         "PeriodTimespan": 1,
         "Limit": 10
       },
-      "SwaggerKey": "exemplo"
+      "SwaggerKey": "authorization"
     }
   ],
   "SwaggerEndPoints": [
     {
-      "Key": "exemplo",
+      "Key": "authorization",
       "Config": [
         {
-          "Name": "Exemplo API",
+          "Name": "Authorization API",
           "Version": "v1",
-          "Url": "http://t6t.exemplo:80/swagger/v1/swagger.json"
+          "Url": "http://t6t.authorization:80/swagger/v1/swagger.json"
         }
       ]
     }
