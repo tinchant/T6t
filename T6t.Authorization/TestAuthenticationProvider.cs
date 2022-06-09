@@ -1,6 +1,6 @@
 ﻿public class TestAuthenticationProvider : IAuthenticationProvider
 {
-    public string Name => "Test";
+    public string Name => "string";
 
     public Task<string> GetKeyByTokenAsync(string token)
     {
